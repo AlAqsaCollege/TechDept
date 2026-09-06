@@ -1,0 +1,15 @@
+<svg class="hero-trace" viewBox="0 0 420 380" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="رسم تخطيطي يمثل تفرع خمسة تخصصات من القسم">
+  <g fill="none" stroke="#8C5A3C" stroke-width="1.5" opacity="0.55">
+    <path d="M340 190 C 260 190, 240 40, 120 40" />
+    <path d="M340 190 C 270 190, 250 115, 120 115" />
+    <path d="M340 190 L 120 190" />
+    <path d="M340 190 C 270 190, 250 265, 120 265" />
+    <path d="M340 190 C 260 190, 240 340, 120 340" />
+  </g>
+  <circle cx="340" cy="190" r="9" fill="#B08D3E" />
+  <circle cx="120" cy="40" r="5.5" fill="#F6F3EA" stroke="#B08D3E" stroke-width="2" />
+  <circle cx="120" cy="115" r="5.5" fill="#F6F3EA" stroke="#B08D3E" stroke-width="2" />
+  <circle cx="120" cy="190" r="5.5" fill="#F6F3EA" stroke="#B08D3E" stroke-width="2" />
+  <circle cx="120" cy="265" r="5.5" fill="#F6F3EA" stroke="#B08D3E" stroke-width="2" />
+  <circle cx="120" cy="340" r="5.5" fill="#F6F3EA" stroke="#B08D3E" stroke-width="2" />
+</svg>
