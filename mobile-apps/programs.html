@@ -1,17 +1,27 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="البرامج والأدوات المستخدمة في تخصص برمجة تطبيقات الهواتف الذكية.">
-  <title>البرامج المقترحة — برمجة تطبيقات الهواتف الذكية</title>
-  <link rel="stylesheet" href="../style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>البرامج المقترحة — برمجة تطبيقات الهواتف الذكية</title>
+<meta name="description" content="البرامج والأدوات المستخدمة في تخصص برمجة تطبيقات الهواتف الذكية.">
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+.programs-table{width:100%;border-collapse:collapse;font-size:.95rem;border:1px solid var(--line)}
+.programs-table th,.programs-table td{border:1px solid var(--line);padding:12px 14px;text-align:start;vertical-align:top}
+.programs-table thead th{background:var(--surface);color:var(--ink);font-size:.9rem}
+.programs-table tr.sem-row th{background:var(--bg);color:var(--accent-2);font-family:'El Messiri','IBM Plex Sans Arabic',sans-serif;font-size:1rem}
+.programs-table td.course{font-weight:600;width:34%}
+.programs-table .prog-list{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.programs-table .prog-list li{color:var(--ink-soft)}
+.programs-table .prog-list strong{color:var(--ink)}
+</style>
 </head>
 <body>
 
 <header class="site-header">
   <div class="wrap">
-    <a class="brand" href="../index.html">
+    <a href="../index.html" class="brand">
       قسم العلوم التكنولوجية
       <small>كلية مجتمع الأقصى — موقع غير رسمي</small>
     </a>
@@ -22,77 +32,74 @@
         <li><a href="../multimedia/index.html">الوسائط المتعددة</a></li>
         <li><a href="../infosec/index.html">أمن المعلومات</a></li>
         <li><a href="../graphic-design/index.html">التصميم الجرافيكي</a></li>
-        <li><a href="index.html" class="active">برمجة تطبيقات الهواتف الذكية</a></li>
+        <li><a href="../mobile-apps/index.html" class="active">برمجة تطبيقات الهواتف الذكية</a></li>
       </ul>
     </nav>
   </div>
 </header>
 
-<main class="wrap">
+<section class="spec-hero wrap" style="padding-bottom:0">
+  <p class="eyebrow">تخصص ٠٥</p>
+  <h1>برمجة تطبيقات الهواتف الذكية</h1>
+</section>
 
-  <div class="spec-hero">
-    <div class="eyebrow">تخصص ٠٥</div>
-    <h1>برمجة تطبيقات الهواتف الذكية</h1>
-  </div>
+<div class="wrap breadcrumb">
+  <a href="../index.html">الرئيسية</a>
+  <span class="sep">/</span>
+  <a href="index.html">برمجة تطبيقات الهواتف الذكية</a>
+  <span class="sep">/</span>
+  <span class="current">البرامج المقترحة للتخصص</span>
+</div>
 
-  <div class="breadcrumb">
-    <a href="../index.html">الرئيسية</a><span class="sep">/</span><a href="index.html">برمجة تطبيقات الهواتف الذكية</a><span class="sep">/</span><span class="current">البرامج المقترحة للتخصص</span>
-  </div>
-
-  <nav class="subnav" aria-label="صفحات التخصص" style="margin-top:22px">
-    <ul>
+<section class="section wrap">
+<nav class="subnav wrap" aria-label="أقسام التخصص">
+  <ul>
       <li><a href="about.html">نبذة عن التخصص</a></li>
       <li><a href="courses.html">المساقات</a></li>
-      <li><a href="course-descriptions-v2.html">توصيف المساقات</a></li>
+      <li><a href="course-descriptions.html">توصيف المساقات</a></li>
       <li><a href="study-plan.html">خطة توزيع المساقات على الفصول</a></li>
-      <li><a href="programs.html" class="active" aria-current="page">البرامج المقترحة للتخصص</a></li>
+      <li><a href="programs.html" class="active">البرامج المقترحة للتخصص</a></li>
       <li><a href="lecturers.html">المحاضرون في التخصص</a></li>
-    </ul>
-  </nav>
+  </ul>
+</nav>
 
-  <section class="section">
-    <div class="section-head">
-      <h2>البرامج المقترحة للتخصص لدفعة سنة 2026</h2>
-      <span class="rule"></span>
-    </div>
-    <p class="lede">البرامج التي يتدرّب عليها الطالب في كل مساق، مرتبة من الفصل الأول إلى الفصل الرابع.</p>
+  <h2>البرامج المقترحة للتخصص لدفعة سنة 2026</h2>
+  <p class="lede" style="margin-top:10px">البرامج التي يتدرّب عليها الطالب في كل مساق، مرتبة من الفصل الأول إلى الفصل الرابع.</p>
 
-    <div style="margin-top:26px">
-      <table class="people-table">
-        <thead>
-          <tr><th scope="col">المساق</th><th scope="col">البرامج المستخدمة</th></tr>
-        </thead>
-        <tbody>
-          <tr><td><strong>الفصل الأول</strong></td><td></td></tr>
-          <tr><td>مبادئ البرمجة</td><td><strong>IntelliJ IDEA</strong> — كتابة برامج جافا وتشغيلها وتصحيحها</td></tr>
-          <tr><td>مبادئ الشبكات</td><td><strong>Cisco Packet Tracer</strong> — محاكاة الشبكات المحلية واختبار الاتصال بها</td></tr>
-          <tr><td>مبادئ نظم التشغيل</td><td><strong>Linux وWindows</strong> — إدارة الملفات والعمليات عبر سطر الأوامر<br><strong>VirtualBox</strong> — إنشاء أجهزة افتراضية لتجربة الأنظمة بأمان<br><strong>Docker</strong> — تشغيل التطبيقات داخل حاويات</td></tr>
-          <tr><td>مبادئ قواعد البيانات</td><td><strong>MySQL</strong> — بناء قواعد البيانات وكتابة استعلامات SQL<br><strong>draw.io</strong> — رسم مخططات الكيان والعلاقة ومخططات النظام</td></tr>
-          <tr><td>تصميم صفحات الانترنت</td><td><strong>Visual Studio Code</strong> — كتابة أكواد الويب وتشغيلها<br><strong>Chrome DevTools</strong> — معاينة الصفحات واختبارها وفحص أخطائها</td></tr>
-          <tr><td>تجربة المستخدم في الموبايل UX</td><td><strong>Figma</strong> — تصميم شاشات التطبيق ونماذجه التفاعلية</td></tr>
-          <tr><td><strong>الفصل الثاني</strong></td><td></td></tr>
-          <tr><td>الوسائط المتعددة</td><td><strong>Adobe Illustrator</strong> — رسم الشعارات والرسومات المتجهة<br><strong>Corel Draw</strong> — تصميم الشعارات والعناصر البصرية<br><strong>Adobe Photoshop</strong> — تجهيز الصور والعناصر البصرية للمشاريع</td></tr>
-          <tr><td>برمجة تطبيقات الهواتف الذكية (1)</td><td><strong>Android Studio</strong> — بناء تطبيقات أندرويد وتشغيلها على المحاكي</td></tr>
-          <tr><td>برمجة وتصميم مواقع الانترنت (1)</td><td><strong>Visual Studio Code</strong> — كتابة أكواد الويب وتشغيلها<br><strong>Chrome DevTools</strong> — معاينة الصفحات واختبارها وفحص أخطائها</td></tr>
-          <tr><td>تصميم واجهات الموبايل UI</td><td><strong>Figma</strong> — تصميم شاشات التطبيق ونماذجه التفاعلية<br><strong>Material Design</strong> — دليل تصميم واجهات أندرويد</td></tr>
-          <tr><td><strong>الفصل الثالث</strong></td><td></td></tr>
-          <tr><td>تحليل الأنظمة وتصميمها</td><td><strong>draw.io</strong> — رسم مخططات الكيان والعلاقة ومخططات النظام</td></tr>
-          <tr><td>نظم قواعد البيانات المتقدمة</td><td><strong>MySQL</strong> — بناء قواعد البيانات وكتابة استعلامات SQL<br><strong>SQLite</strong> — قاعدة بيانات التطبيق على الجهاز<br><strong>Firebase</strong> — قاعدة بيانات وخدمات سحابية للتطبيق</td></tr>
-          <tr><td>برمجة وتصميم مواقع الانترنت (2)</td><td><strong>Visual Studio Code</strong> — كتابة أكواد الويب وتشغيلها<br><strong>XAMPP</strong> — تشغيل خادم الويب وقاعدة البيانات محلياً<br><strong>Postman</strong> — تجربة خدمات الويب والتحقق من استجاباتها</td></tr>
-          <tr><td>برمجة تطبيقات الهواتف الذكية (2)</td><td><strong>Android Studio</strong> — بناء تطبيقات أندرويد وتشغيلها على المحاكي<br><strong>Material Design</strong> — دليل تصميم واجهات أندرويد</td></tr>
-          <tr><td><strong>الفصل الرابع</strong></td><td></td></tr>
-          <tr><td>برمجة متقدمة</td><td><strong>IntelliJ IDEA</strong> — كتابة برامج جافا وتشغيلها وتصحيحها</td></tr>
-          <tr><td>العمل الحر وتطبيقاته</td><td><strong>GitHub Pages</strong> — نشر المحفظة الإلكترونية وعرض الأعمال المنجزة</td></tr>
-          <tr><td>الحوسبة السحابية</td><td><strong>Firebase</strong> — قاعدة بيانات وخدمات سحابية للتطبيق</td></tr>
-          <tr><td>مشروع تخرج</td><td><strong>Android Studio</strong> — بناء تطبيقات أندرويد وتشغيلها على المحاكي<br><strong>Firebase</strong> — قاعدة بيانات وخدمات سحابية للتطبيق<br><strong>Microsoft Office</strong> — كتابة تقارير المشروع وتوثيقه</td></tr>
-        </tbody>
-      </table>
-    </div>
-  </section>
+  <div style="overflow-x:auto;margin-top:22px">
+    <table class="programs-table">
+      <thead>
+        <tr><th>المساق</th><th>البرامج المستخدمة</th></tr>
+      </thead>
+      <tbody>
+        <tr class="sem-row"><th colspan="2">الفصل الأول</th></tr>
+        <tr><td class="course">مبادئ البرمجة</td><td><ul class="prog-list"><li><strong dir="ltr">IntelliJ IDEA</strong> — كتابة برامج جافا وتشغيلها وتصحيحها</li></ul></td></tr>
+        <tr><td class="course">مبادئ الشبكات</td><td><ul class="prog-list"><li><strong dir="ltr">Cisco Packet Tracer</strong> — محاكاة الشبكات المحلية واختبار الاتصال بها</li></ul></td></tr>
+        <tr><td class="course">مبادئ نظم التشغيل</td><td><ul class="prog-list"><li><strong dir="ltr">Linux وWindows</strong> — إدارة الملفات والعمليات عبر سطر الأوامر</li><li><strong dir="ltr">VirtualBox</strong> — إنشاء أجهزة افتراضية لتجربة الأنظمة بأمان</li><li><strong dir="ltr">Docker</strong> — تشغيل التطبيقات داخل حاويات</li></ul></td></tr>
+        <tr><td class="course">مبادئ قواعد البيانات</td><td><ul class="prog-list"><li><strong dir="ltr">MySQL</strong> — بناء قواعد البيانات وكتابة استعلامات SQL</li><li><strong dir="ltr">draw.io</strong> — رسم مخططات الكيان والعلاقة ومخططات النظام</li></ul></td></tr>
+        <tr><td class="course">تصميم صفحات الانترنت</td><td><ul class="prog-list"><li><strong dir="ltr">Visual Studio Code</strong> — كتابة أكواد الويب وتشغيلها</li><li><strong dir="ltr">Chrome DevTools</strong> — معاينة الصفحات واختبارها وفحص أخطائها</li></ul></td></tr>
+        <tr><td class="course">تجربة المستخدم في الموبايل UX</td><td><ul class="prog-list"><li><strong dir="ltr">Figma</strong> — تصميم شاشات التطبيق ونماذجه التفاعلية</li></ul></td></tr>
+        <tr class="sem-row"><th colspan="2">الفصل الثاني</th></tr>
+        <tr><td class="course">الوسائط المتعددة</td><td><ul class="prog-list"><li><strong dir="ltr">Adobe Illustrator</strong> — رسم الشعارات والرسومات المتجهة</li><li><strong dir="ltr">Corel Draw</strong> — تصميم الشعارات والعناصر البصرية</li><li><strong dir="ltr">Adobe Photoshop</strong> — تجهيز الصور والعناصر البصرية للمشاريع</li></ul></td></tr>
+        <tr><td class="course">برمجة تطبيقات الهواتف الذكية (1)</td><td><ul class="prog-list"><li><strong dir="ltr">Android Studio</strong> — بناء تطبيقات أندرويد وتشغيلها على المحاكي</li></ul></td></tr>
+        <tr><td class="course">برمجة وتصميم مواقع الانترنت (1)</td><td><ul class="prog-list"><li><strong dir="ltr">Visual Studio Code</strong> — كتابة أكواد الويب وتشغيلها</li><li><strong dir="ltr">Chrome DevTools</strong> — معاينة الصفحات واختبارها وفحص أخطائها</li></ul></td></tr>
+        <tr><td class="course">تصميم واجهات الموبايل UI</td><td><ul class="prog-list"><li><strong dir="ltr">Figma</strong> — تصميم شاشات التطبيق ونماذجه التفاعلية</li><li><strong dir="ltr">Material Design</strong> — دليل تصميم واجهات أندرويد</li></ul></td></tr>
+        <tr class="sem-row"><th colspan="2">الفصل الثالث</th></tr>
+        <tr><td class="course">تحليل الأنظمة وتصميمها</td><td><ul class="prog-list"><li><strong dir="ltr">draw.io</strong> — رسم مخططات الكيان والعلاقة ومخططات النظام</li></ul></td></tr>
+        <tr><td class="course">نظم قواعد البيانات المتقدمة</td><td><ul class="prog-list"><li><strong dir="ltr">MySQL</strong> — بناء قواعد البيانات وكتابة استعلامات SQL</li><li><strong dir="ltr">SQLite</strong> — قاعدة بيانات التطبيق على الجهاز</li><li><strong dir="ltr">Firebase</strong> — قاعدة بيانات وخدمات سحابية للتطبيق</li></ul></td></tr>
+        <tr><td class="course">برمجة وتصميم مواقع الانترنت (2)</td><td><ul class="prog-list"><li><strong dir="ltr">Visual Studio Code</strong> — كتابة أكواد الويب وتشغيلها</li><li><strong dir="ltr">XAMPP</strong> — تشغيل خادم الويب وقاعدة البيانات محلياً</li><li><strong dir="ltr">Postman</strong> — تجربة خدمات الويب والتحقق من استجاباتها</li></ul></td></tr>
+        <tr><td class="course">برمجة تطبيقات الهواتف الذكية (2)</td><td><ul class="prog-list"><li><strong dir="ltr">Android Studio</strong> — بناء تطبيقات أندرويد وتشغيلها على المحاكي</li><li><strong dir="ltr">Material Design</strong> — دليل تصميم واجهات أندرويد</li></ul></td></tr>
+        <tr class="sem-row"><th colspan="2">الفصل الرابع</th></tr>
+        <tr><td class="course">برمجة متقدمة</td><td><ul class="prog-list"><li><strong dir="ltr">IntelliJ IDEA</strong> — كتابة برامج جافا وتشغيلها وتصحيحها</li></ul></td></tr>
+        <tr><td class="course">العمل الحر وتطبيقاته</td><td><ul class="prog-list"><li><strong dir="ltr">GitHub Pages</strong> — نشر المحفظة الإلكترونية وعرض الأعمال المنجزة</li></ul></td></tr>
+        <tr><td class="course">الحوسبة السحابية</td><td><ul class="prog-list"><li><strong dir="ltr">Firebase</strong> — قاعدة بيانات وخدمات سحابية للتطبيق</li></ul></td></tr>
+        <tr><td class="course">مشروع تخرج</td><td><ul class="prog-list"><li><strong dir="ltr">Android Studio</strong> — بناء تطبيقات أندرويد وتشغيلها على المحاكي</li><li><strong dir="ltr">Firebase</strong> — قاعدة بيانات وخدمات سحابية للتطبيق</li><li><strong dir="ltr">Microsoft Office</strong> — كتابة تقارير المشروع وتوثيقه</li></ul></td></tr>
+      </tbody>
+    </table>
+  </div>
 
-  <a class="back-link" href="index.html">← العودة لصفحة التخصص</a>
-
-</main>
+  <a href="index.html" class="back-link">← العودة لصفحة التخصص</a>
+</section>
 
 <footer class="site-footer">
   <div class="wrap">
