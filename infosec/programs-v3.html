@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>البرامج المقترحة — أمن المعلومات</title>
+<meta name="description" content="البرامج وأدوات الذكاء الاصطناعي المستخدمة في تخصص أمن المعلومات لدفعة سنة 2026.">
+<link rel="stylesheet" href="../style.css">
+<style>
+  /* جدول البرامج — يستخدم نفس ألوان الموقع */
+  .table-scroll{ overflow-x:auto; }
+  .prog-table{ width:100%; border-collapse:collapse; font-size:.95rem; }
+  .prog-table th{
+    text-align:start; color:var(--ink-soft); font-weight:600; font-size:.8rem;
+    padding:0 12px 10px; border-bottom:1px solid var(--line);
+  }
+  .prog-table td{
+    padding:14px 12px; border-bottom:1px solid var(--line-soft);
+    vertical-align:top; color:var(--ink-soft);
+  }
+  .prog-table td.course{ color:var(--ink); font-weight:600; width:28%; }
+  .prog-table tr.sem td{
+    background:var(--surface); color:var(--accent-2);
+    font-family:'El Messiri','IBM Plex Sans Arabic',sans-serif;
+    font-weight:700; font-size:1.02rem;
+    border-bottom:1px solid var(--line); border-right:3px solid var(--accent);
+  }
+  .prog-table strong{ color:var(--ink); font-weight:600; }
+  .prog-table .tool{ margin:0 0 6px; }
+  .prog-table .tool:last-child{ margin-bottom:0; }
+  .prog-table .ai{
+    margin-top:10px; padding-top:10px; border-top:1px dashed var(--line);
+  }
+  .prog-table .ai-tag{
+    display:inline-block; font-size:.72rem; font-weight:600;
+    color:var(--surface); background:var(--accent-2);
+    padding:1px 9px; margin-inline-start:6px; vertical-align:middle;
+  }
+  .prog-table .ai .tool strong{ color:var(--accent-2); }
+  .prog-table .note{ color:var(--ink-soft); }
+  @media (max-width:600px){
+    .prog-table td.course{ width:34%; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="https://alaqsacollege.github.io/TechDept/index.html">
+      قسم العلوم التكنولوجية
+      <small>كلية مجتمع الأقصى — موقع غير رسمي</small>
+    </a>
+    <nav class="main-nav" aria-label="القائمة الرئيسية">
+      <ul>
+        <li><a href="https://alaqsacollege.github.io/TechDept/index.html">الرئيسية</a></li>
+        <li><a href="https://alaqsacollege.github.io/TechDept/ict/index.html">تكنولوجيا المعلومات والاتصالات</a></li>
+        <li><a href="https://alaqsacollege.github.io/TechDept/multimedia/index.html">الوسائط المتعددة</a></li>
+        <li><a class="active" href="https://alaqsacollege.github.io/TechDept/infosec/index.html">أمن المعلومات</a></li>
+        <li><a href="https://alaqsacollege.github.io/TechDept/graphic-design/index.html">التصميم الجرافيكي</a></li>
+        <li><a href="https://alaqsacollege.github.io/TechDept/mobile-apps/index.html">برمجة تطبيقات الهواتف الذكية</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+
+    <section class="spec-hero">
+      <div class="eyebrow">تخصص ٠٣</div>
+      <h1>أمن المعلومات</h1>
+      <nav class="breadcrumb" aria-label="مسار التنقل">
+        <a href="https://alaqsacollege.github.io/TechDept/index.html">الرئيسية</a><span class="sep">/</span><a href="https://alaqsacollege.github.io/TechDept/infosec/index.html">أمن المعلومات</a><span class="sep">/</span><span class="current">البرامج المقترحة للتخصص</span>
+      </nav>
+    </section>
+
+    <nav class="subnav" aria-label="صفحات التخصص">
+      <ul>
+        <li><a href="https://alaqsacollege.github.io/TechDept/infosec/about.html">نبذة عن التخصص</a></li>
+        <li><a href="https://alaqsacollege.github.io/TechDept/infosec/courses.html">المساقات</a></li>
+        <li><a href="https://alaqsacollege.github.io/TechDept/infosec/course-descriptions-v4.html">توصيف المساقات</a></li>
+        <li><a href="https://alaqsacollege.github.io/TechDept/infosec/study-plan.html">خطة توزيع المساقات على الفصول</a></li>
+        <li><a class="active" href="https://alaqsacollege.github.io/TechDept/infosec/programs-v4.html">البرامج المقترحة للتخصص</a></li>
+        <li><a href="https://alaqsacollege.github.io/TechDept/infosec/lecturers.html">المحاضرون في التخصص</a></li>
+      </ul>
+    </nav>
+
+    <section class="section">
+      <div class="section-head">
+        <h2>البرامج المقترحة للتخصص لدفعة سنة 2026</h2>
+        <span class="rule"></span>
+      </div>
+      <p class="lede">البرامج وأدوات الذكاء الاصطناعي التي يتدرّب عليها الطالب في كل مساق، مرتبة من الفصل الأول إلى الفصل الرابع.</p>
+
+      <div class="notice" style="margin-top:22px;">
+        <strong>ملاحظة حول أدوات الذكاء الاصطناعي:</strong> تُستخدم أدوات الذكاء الاصطناعي بوصفها مساعداً للتعلّم، ويلتزم الطالب بالتحقق من مخرجاتها بنفسه، وعدم إدخال بيانات سرّية أو شخصية فيها، وتوثيق استخدامه لها وفق النزاهة الأكاديمية. ويُقصد بـ«مساعد ذكي عام» أي مساعد محادثة معتمد مثل Claude أو ChatGPT أو Gemini.
+      </div>
+
+      <div class="table-scroll">
+      <table class="prog-table">
+        <thead>
+          <tr>
+            <th>المساق</th>
+            <th>البرامج المستخدمة وأدوات الذكاء الاصطناعي</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <!-- ================= الفصل الأول ================= -->
+          <tr class="sem"><td colspan="2">الفصل الأول</td></tr>
+
+          <tr>
+            <td class="course">مبادئ قواعد البيانات</td>
+            <td>
+              <div class="tool"><strong>MySQL</strong> — بناء قواعد البيانات وكتابة الاستعلامات</div>
+              <div class="ai">
+                <div class="tool"><span class="ai-tag">ذكاء اصطناعي</span><strong>مساعد ذكي عام</strong> — مراجعة استعلامات SQL وشرح رسائل الأخطاء واقتراح تحسينات للتطبيع (Normalization)</div>
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="course">تصميم صفحات الانترنت</td>
+            <td>
+              <div class="tool"><strong>Visual Studio Code</strong> — كتابة صفحات الويب</div>
+              <div class="ai">
+                <div class="tool"><span class="ai-tag">ذكاء اصطناعي</span><strong>GitHub Copilot</strong> — الإكمال التلقائي وشرح أكواد HTML وCSS داخل VS Code</div>
+                <div class="tool"><strong>مساعد ذكي عام</strong> — اقتراح تصاميم متجاوبة ومراجعة إمكانية الوصول (Accessibility)</div>
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="course">مبادئ الشبكات</td>
+            <td>
+              <div class="tool"><strong>Cisco Packet Tracer</strong> — رسم الشبكات وتجربتها على الحاسوب</div>
+              <div class="tool"><strong>Wireshark</strong> — مشاهدة البيانات المتبادلة عبر الشبكة</div>
+              <div class="ai">
+                <div class="tool"><span class="ai-tag">ذكاء اصطناعي</span><strong>مساعد ذكي عام</strong> — شرح البروتوكولات والحزم الملتقطة وأوامر الإعداد، وتفسير أسباب فشل الاتصال</div>
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="course">مبادئ نظم التشغيل</td>
+            <td>
+              <div class="tool"><strong>Linux (Ubuntu)</strong> — إدارة النظام والتعامل مع سطر الأوامر (CLI)</div>
+              <div class="tool"><strong>VirtualBox</strong> — تشغيل نظام داخل نظام آخر</div>
+              <div class="ai">
+                <div class="tool"><span class="ai-tag">ذكاء اصطناعي</span><strong>مساعد ذكي عام</strong> — شرح أوامر Linux وتفسير مخرجاتها ورسائل الأخطاء، مع تجربة الأوامر في الآلة الافتراضية فقط</div>
+              </div>
+            </td>
+          </tr>
+
+          <!-- ================= الفصل الثاني ================= -->
+          <tr class="sem"><td colspan="2">الفصل الثاني</td></tr>
+
+          <tr>
+            <td class="course">مبادئ الاتصالات وتكنولوجيا المعلومات</td>
+            <td>
+              <div class="tool note">نظري</div>
+              <div class="ai">
+                <div class="tool"><span class="ai-tag">ذكاء اصطناعي</span><strong>مساعد ذكي عام</strong> — التعرّف عملياً على الذكاء الاصطناعي بوصفه تقنية ناشئة: أسلوب الصياغة الجيدة للطلبات، وحدود المساعد، وأخلاقيات الاستخدام والخصوصية</div>
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="course">البرمجة الآمنة بلغة بايثون</td>
+            <td>
+              <div class="tool"><strong>Python</strong> — كتابة البرامج والسكربتات والتشفير والتجزئة وبرمجة الاتصال الشبكي وفحص المنافذ</div>
+              <div class="ai">
+                <div class="tool"><span class="ai-tag">ذكاء اصطناعي</span><strong>GitHub Copilot</strong> — المساعدة في كتابة الشيفرة وتصحيحها وشرحها</div>
+                <div class="tool"><strong>مساعد ذكي عام</strong> — مراجعة الشيفرة بحثاً عن ثغرات الترميز غير الآمن والتحقق من سلامة المقترحات</div>
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="course">أمن الويب</td>
+            <td>
+              <div class="tool"><strong>OWASP ZAP</strong> — فحص أمان مواقع الويب</div>
+              <div class="tool"><strong>DVWA</strong> — تطبيق ويب مخصّص للتدريب القانوني على الثغرات</div>
+              <div class="ai">
+                <div class="tool"><span class="ai-tag">ذكاء اصطناعي</span><strong>Gandalf</strong> — لعبة تعليمية لفهم هجمات حقن التعليمات (Prompt Injection) في النماذج اللغوية</div>
+                <div class="tool"><strong>مساعد ذكي عام</strong> — شرح ثغرات OWASP Top 10 وتفسير تقارير الفحص</div>
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="course">معمارية الشبكات</td>
+            <td>
+              <div class="tool"><strong>Cisco Packet Tracer</strong> — تصميم وبناء الشبكات المتقدمة والربط بين الموجهات</div>
+              <div class="ai">
+                <div class="tool"><span class="ai-tag">ذكاء اصطناعي</span><strong>مساعد ذكي عام</strong> — شرح إعدادات VLAN والتوجيه وNAT، والمساعدة في استكشاف الأعطال وإصلاحها</div>
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="course">إدارة وأمان نظم التشغيل</td>
+            <td>
+              <div class="tool"><strong>Windows Server</strong> — إدارة دليل الخدمات (Active Directory) والصلاحيات والأمان</div>
+              <div class="tool"><strong>VirtualBox</strong> — تشغيل نظام داخل نظام آخر</div>
+              <div class="ai">
+                <div class="tool"><span class="ai-tag">ذكاء اصطناعي</span><strong>مساعد ذكي عام</strong> — شرح سياسات المجموعات وسجلات الأحداث، ومراجعة سكربتات PowerShell وBash قبل تشغيلها</div>
+              </div>
+            </td>
+          </tr>
+
+          <!-- ================= الفصل الثالث ================= -->
+          <tr class="sem"><td colspan="2">الفصل الثالث</td></tr>
+
+          <tr>
+            <td class="course">تحليل البرامج الضارة</td>
+            <td>
+              <div class="tool"><strong>Ghidra</strong> — التحليل الثابت للهندسة العكسية وفحص بنية الملف التنفيذي</div>
+              <div class="tool"><strong>x64dbg</strong> — التحليل الديناميكي وتتبّع تنفيذ الكود خطوة بخطوة</div>
+              <div class="ai">
+                <div class="tool"><span class="ai-tag">ذكاء اصطناعي</span><strong>ANY.RUN</strong> — تشغيل العيّنات في بيئة معزولة مع تقرير مدعوم بالذكاء الاصطناعي</div>
+                <div class="tool"><strong>VirusTotal Code Insight</strong> — شرح الشيفرة المشبوهة بلغة طبيعية وتلخيص سلوك العيّنة</div>
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="course">إدارة أمان الشبكات</td>
+            <td>
+              <div class="tool"><strong>pfSense</strong> — جدار حماية للشبكة</div>
+              <div class="tool"><strong>Snort</strong> — كشف التسلل في الشبكة</div>
+              <div class="tool"><strong>Nmap</strong> — فحص الأجهزة والمنافذ المفتوحة</div>
+              <div class="ai">
+                <div class="tool"><span class="ai-tag">ذكاء اصطناعي</span><strong>مساعد ذكي عام</strong> — شرح قواعد Snort وقواعد جدار الحماية، وتفسير مخرجات Nmap وسجلات التنبيهات</div>
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="course">توجهات التهديدات والمخاطر</td>
+            <td>
+              <div class="tool"><strong>GoPhish</strong> — محاكاة حملة تصيّد داخل المختبر</div>
+              <div class="tool note">باقي المساق تحليلي ويستند إلى Cyber Kill Chain وMITRE ATT&amp;CK</div>
+              <div class="ai">
+                <div class="tool"><span class="ai-tag">ذكاء اصطناعي</span><strong>مساعد ذكي عام</strong> — تحليل حالات الهجمات الحقيقية وربطها بمراحل Cyber Kill Chain وتقنيات MITRE ATT&amp;CK، ودراسة كيفية توظيف المهاجمين للذكاء الاصطناعي</div>
+              </div>
+            </td>
+          </tr>
+
+          <!-- ================= الفصل الرابع ================= -->
+          <tr class="sem"><td colspan="2">الفصل الرابع</td></tr>
+
+          <tr>
+            <td class="course">إدارة المخاطر</td>
+            <td>
+              <div class="tool"><strong>Google Sheets</strong> — بناء سجل المخاطر</div>
+              <div class="tool note">باقي المساق دراسة حالة ويستند إلى ISO/IEC 27001 وNIST SP 800-30</div>
+              <div class="ai">
+                <div class="tool"><span class="ai-tag">ذكاء اصطناعي</span><strong>Gemini في Google Sheets</strong> — المساعدة في تنظيم سجل المخاطر وصياغة المعادلات</div>
+                <div class="tool"><strong>مساعد ذكي عام</strong> — اقتراح الأصول والتهديدات ونقاط الضعف لمؤسسة افتراضية، مع مراجعة الطالب وتقييمه للمخرجات</div>
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="course">الاستجابة للحوادث والانتعاش من الكوارث</td>
+            <td>
+              <div class="tool"><strong>Splunk</strong> — جمع وتحليل سجلات الأحداث الأمنية (SIEM)</div>
+              <div class="tool"><strong>Wireshark</strong> — مشاهدة البيانات المتبادلة عبر الشبكة</div>
+              <div class="ai">
+                <div class="tool"><span class="ai-tag">ذكاء اصطناعي</span><strong>Splunk AI Assistant</strong> — المساعدة في كتابة استعلامات SPL وفهم نتائج التحليل</div>
+                <div class="tool"><strong>ANY.RUN</strong> — تقارير العيّنات المدعومة بالذكاء الاصطناعي</div>
+                <div class="tool"><strong>مساعد ذكي عام</strong> — صياغة خطوات الاحتواء والمعالجة بمراجعة بشرية</div>
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="course">القرصنة والاستغلال</td>
+            <td>
+              <div class="tool"><strong>Kali Linux</strong> — نظام جاهز لاختبار الاختراق</div>
+              <div class="tool"><strong>Metasploit Framework</strong> — تجربة استغلال الثغرات في المختبر</div>
+              <div class="tool"><strong>Nmap</strong> — فحص الأجهزة والمنافذ المفتوحة</div>
+              <div class="ai">
+                <div class="tool"><span class="ai-tag">ذكاء اصطناعي</span><strong>مساعد ذكي عام</strong> — تفسير مخرجات الفحص وتنظيم نتائج الاختبار وصياغة تقرير اختبار الاختراق، ضمن بيئة مخبرية مرخّصة وبالتزام بالضوابط الأخلاقية والقانونية</div>
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="course">الطب الشرعي الرقمي</td>
+            <td>
+              <div class="tool"><strong>Autopsy</strong> — فحص الأقراص واسترجاع الملفات المحذوفة</div>
+              <div class="tool"><strong>FTK Imager</strong> — الحصول على نسخة جنائية مطابقة للأقراص</div>
+              <div class="tool"><strong>Volatility 3</strong> — تحليل محتوى الذاكرة العشوائية (RAM)</div>
+              <div class="ai">
+                <div class="tool"><span class="ai-tag">ذكاء اصطناعي</span><strong>مساعد ذكي عام</strong> — شرح الآثار الرقمية (Artifacts) وإعداد مسودة تقرير التحقيق، مع إبقاء الأدلة الحقيقية خارج الأداة</div>
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="course">مشروع التخرج</td>
+            <td>
+              <div class="tool note">تُحدَّد الأدوات بحسب موضوع المشروع.</div>
+              <div class="ai">
+                <div class="tool"><span class="ai-tag">ذكاء اصطناعي</span><strong>أدوات الذكاء الاصطناعي الأمنية</strong> — يُشجَّع على توظيفها بحسب موضوع المشروع، مع توثيق طريقة الاستخدام وحدوده</div>
+              </div>
+            </td>
+          </tr>
+
+          <!-- ================= عام ================= -->
+          <tr class="sem"><td colspan="2">أدوات الذكاء الاصطناعي</td></tr>
+
+          <tr>
+            <td class="course">جميع مساقات التخصص</td>
+            <td>
+              <div class="tool"><span class="ai-tag">ذكاء اصطناعي</span><strong>مساعد ذكي للمحادثة</strong> — شرح المفاهيم والأخطاء بالعربية، مع تحقق الطالب من المخرجات وعدم إدخال بيانات سرّية</div>
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+      </div>
+
+      <a class="back-link" href="https://alaqsacollege.github.io/TechDept/infosec/index.html">← العودة لصفحة التخصص</a>
+    </section>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span>© قسم العلوم التكنولوجية — كلية مجتمع الأقصى</span>
+    <span>هذا موقع طلابي غير رسمي</span>
+  </div>
+</footer>
+
+</body>
+</html>
