@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="توصيف مساقات تخصص برمجة تطبيقات الهواتف الذكية، وفق الخطة الدراسية المعتمدة.">
+<title>توصيف المساقات — برمجة تطبيقات الهواتف الذكية</title>
+<!-- style.css (unchanged) is embedded so the page keeps its look when opened on its own.
+     On the site, replace this <style> block with: <link rel="stylesheet" href="../style.css"> -->
+<style>
+@import url('https://fonts.googleapis.com/css2?family=El+Messiri:wght@500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap');
+
+:root{
+  --bg: #EDE7DA;
+  --surface: #F6F3EA;
+  --ink: #1F3A3D;
+  --ink-soft: #45605F;
+  --accent: #B08D3E;
+  --accent-2: #8C5A3C;
+  --line: rgba(31,58,61,.22);
+  --line-soft: rgba(31,58,61,.12);
+  --max: 920px;
+}
+
+*{ box-sizing: border-box; }
+html{ scroll-behavior: smooth; }
+
+body{
+  margin:0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: 'IBM Plex Sans Arabic', 'Tahoma', sans-serif;
+  line-height: 1.8;
+  font-size: 17px;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,h2,h3,.brand{
+  font-family: 'El Messiri', 'IBM Plex Sans Arabic', sans-serif;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 0;
+}
+
+a{ color: inherit; }
+
+img{ max-width:100%; display:block; }
+
+:focus-visible{
+  outline: 2px solid var(--accent-2);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce){
+  html{ scroll-behavior: auto; }
+  *{ animation: none !important; transition: none !important; }
+}
+
+.wrap{
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+/* ---------- Header ---------- */
+.site-header{
+  padding: 26px 0 22px;
+  border-bottom: 1px solid var(--line-soft);
+}
+.site-header .wrap{
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  max-width: 1040px;
+}
+.brand{
+  font-size: 1.15rem;
+  text-decoration:none;
+  display:flex;
+  flex-direction:column;
+  gap: 2px;
+}
+.brand small{
+  font-family:'IBM Plex Sans Arabic', sans-serif;
+  font-weight:500;
+  font-size: .68rem;
+  color: var(--ink-soft);
+  letter-spacing: .02em;
+}
+nav.main-nav ul{
+  list-style:none;
+  display:flex;
+  gap: 26px;
+  margin:0;
+  padding:0;
+  flex-wrap: wrap;
+}
+nav.main-nav a{
+  text-decoration:none;
+  font-size: .95rem;
+  font-weight: 500;
+  color: var(--ink-soft);
+  padding-bottom: 3px;
+  border-bottom: 2px solid transparent;
+  transition: color .15s, border-color .15s;
+}
+nav.main-nav a:hover,
+nav.main-nav a.active{
+  color: var(--ink);
+  border-color: var(--accent);
+}
+
+/* ---------- Hero ---------- */
+.hero{
+  padding: 64px 0 40px;
+  max-width: 1040px;
+  margin: 0 auto;
+}
+.hero .wrap{
+  display:grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 40px;
+  align-items:center;
+  max-width: none;
+  padding: 0 28px;
+}
+.hero-copy .eyebrow{
+  color: var(--accent-2);
+  font-weight: 600;
+  font-size: .9rem;
+  margin: 0 0 10px;
+}
+.hero-copy h1{
+  font-size: clamp(2rem, 4vw, 2.9rem);
+  line-height: 1.3;
+  max-width: 15ch;
+}
+.hero-copy p{
+  color: var(--ink-soft);
+  max-width: 46ch;
+  margin-top: 16px;
+  font-size: 1.02rem;
+}
+.hero-trace{
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 760px){
+  .hero .wrap{ grid-template-columns: 1fr; }
+  .hero-trace{ order: -1; max-width: 260px; margin: 0 auto; }
+}
+
+/* ---------- Section headings ---------- */
+.section{ padding: 46px 0; }
+.section-head{
+  display:flex;
+  align-items: baseline;
+  gap: 14px;
+  margin-bottom: 26px;
+}
+.section-head h2{
+  font-size: 1.5rem;
+}
+.section-head .rule{
+  flex:1;
+  height:1px;
+  background: var(--line);
+}
+.section p.lede{
+  color: var(--ink-soft);
+  max-width: 62ch;
+}
+
+/* ---------- About stats ---------- */
+.stat-row{
+  display:flex;
+  gap: 40px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+.stat-row .stat{
+  display:flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.stat .num{
+  font-family:'El Messiri', sans-serif;
+  font-weight:700;
+  font-size: 2rem;
+  color: var(--accent-2);
+}
+.stat .label{
+  color: var(--ink-soft);
+  font-size: .88rem;
+}
+
+/* ---------- Specialty spine (signature element) ---------- */
+.spine{
+  position: relative;
+  margin-top: 8px;
+}
+.spine::before{
+  content:"";
+  position:absolute;
+  top: 14px;
+  bottom: 14px;
+  right: 5px;
+  width: 1.5px;
+  background: linear-gradient(var(--accent), var(--line));
+}
+.spine-item{
+  position:relative;
+  display:grid;
+  grid-template-columns: 1fr auto;
+  align-items:start;
+  gap: 18px;
+  padding: 18px 0 18px 0;
+  padding-right: 34px;
+  border-bottom: 1px solid var(--line-soft);
+  text-decoration:none;
+  color: var(--ink);
+}
+.spine-item:last-child{ border-bottom:none; }
+.spine-item::before{
+  content:"";
+  position:absolute;
+  right: 0;
+  top: 26px;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: var(--surface);
+  border: 2px solid var(--accent);
+  transition: background .15s;
+}
+.spine-item:hover::before,
+.spine-item:focus-visible::before{
+  background: var(--accent);
+}
+.spine-item .code{
+  font-family:'El Messiri', sans-serif;
+  font-size: .78rem;
+  color: var(--accent-2);
+  font-weight:600;
+  display:block;
+  margin-bottom: 3px;
+}
+.spine-item h3{
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+.spine-item p{
+  color: var(--ink-soft);
+  margin: 8px 0 0;
+  max-width: 56ch;
+  font-size: .95rem;
+}
+.spine-item .go{
+  align-self:center;
+  color: var(--accent-2);
+  font-size: .9rem;
+  white-space:nowrap;
+  padding-top: 2px;
+}
+
+@media (max-width: 600px){
+  .spine-item{ grid-template-columns: 1fr; }
+  .spine-item .go{ display:none; }
+}
+
+/* ---------- Specialty page hero ---------- */
+.spec-hero{
+  padding: 54px 0 20px;
+}
+.spec-hero .eyebrow{
+  color: var(--accent-2);
+  font-weight:600;
+  font-size:.9rem;
+}
+.spec-hero h1{
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  margin-top: 10px;
+  max-width: 20ch;
+}
+.spec-hero p.tagline{
+  color: var(--ink-soft);
+  margin-top: 14px;
+  max-width: 58ch;
+  font-size: 1.05rem;
+}
+
+.mini-divider{
+  display:flex;
+  align-items:center;
+  gap: 10px;
+  margin: 6px 0 24px;
+}
+.mini-divider .dot{
+  width:8px; height:8px; border-radius:50%;
+  background: var(--accent);
+  flex-shrink:0;
+}
+.mini-divider .line{
+  height:1px;
+  flex:1;
+  background: var(--line);
+}
+
+.plain-list{
+  list-style:none;
+  margin:0; padding:0;
+  display:grid;
+  gap: 14px;
+}
+.plain-list li{
+  position:relative;
+  padding-right: 20px;
+  color: var(--ink-soft);
+}
+.plain-list li::before{
+  content:"";
+  position:absolute;
+  right:0; top:.65em;
+  width:7px; height:7px;
+  background: var(--accent-2);
+}
+.plain-list strong{
+  color: var(--ink);
+  font-weight:600;
+}
+
+.back-link{
+  display:inline-block;
+  margin-top: 10px;
+  color: var(--accent-2);
+  font-weight:600;
+  text-decoration:none;
+  border-bottom: 1px solid transparent;
+}
+.back-link:hover{ border-color: var(--accent-2); }
+
+/* ---------- Breadcrumb ---------- */
+.breadcrumb{
+  padding-top: 22px;
+  font-size: .82rem;
+  color: var(--ink-soft);
+}
+.breadcrumb a{
+  color: var(--ink-soft);
+  text-decoration: none;
+}
+.breadcrumb a:hover{ color: var(--accent-2); }
+.breadcrumb .sep{ margin: 0 8px; color: var(--line); }
+.breadcrumb .current{ color: var(--ink); font-weight: 600; }
+
+/* ---------- Specialty sub-navigation ---------- */
+.subnav ul{
+  display:flex;
+  gap: 22px;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0 0 8px;
+  padding: 0 0 16px;
+  border-bottom: 1px solid var(--line-soft);
+}
+.subnav a{
+  text-decoration:none;
+  font-size: .92rem;
+  font-weight: 500;
+  color: var(--ink-soft);
+  padding-bottom: 5px;
+  border-bottom: 2px solid transparent;
+  transition: color .15s, border-color .15s;
+}
+.subnav a:hover,
+.subnav a.active{
+  color: var(--ink);
+  border-color: var(--accent);
+}
+
+/* ---------- Course rows ---------- */
+.course-row{
+  display:flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--line-soft);
+}
+.course-row:last-child{ border-bottom: none; }
+.course-row .name{ font-weight: 600; }
+.course-row .hours{
+  color: var(--ink-soft);
+  font-size: .85rem;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* ---------- Semester blocks (study plan) ---------- */
+.semester{
+  margin-bottom: 30px;
+}
+.semester h3{
+  font-size: 1.05rem;
+  margin-bottom: 6px;
+}
+.semester .semester-note{
+  color: var(--ink-soft);
+  font-size: .85rem;
+  margin-bottom: 10px;
+}
+
+/* ---------- Notice banner ---------- */
+.notice{
+  background: var(--surface);
+  border-right: 3px solid var(--accent);
+  padding: 14px 18px;
+  font-size: .92rem;
+  color: var(--ink-soft);
+  margin-bottom: 30px;
+  line-height: 1.75;
+}
+.notice strong{ color: var(--ink); }
+
+/* ---------- Placeholder table (lecturers) ---------- */
+.people-table{
+  width: 100%;
+  border-collapse: collapse;
+  font-size: .92rem;
+}
+.people-table th{
+  text-align: start;
+  color: var(--ink-soft);
+  font-weight: 600;
+  font-size: .8rem;
+  padding: 0 0 10px;
+  border-bottom: 1px solid var(--line);
+}
+.people-table td{
+  padding: 14px 0;
+  border-bottom: 1px solid var(--line-soft);
+  color: var(--ink);
+}
+.people-table td.muted{ color: var(--ink-soft); }
+
+/* ---------- Footer ---------- */
+footer.site-footer{
+  border-top: 1px solid var(--line-soft);
+  margin-top: 40px;
+  padding: 26px 0 40px;
+}
+footer.site-footer .wrap{
+  display:flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap:wrap;
+  font-size: .85rem;
+  color: var(--ink-soft);
+}
+
+</style>
+</head>
+<body>
+<header class="site-header"><div class="wrap">
+<a class="brand" href="https://alaqsacollege.github.io/TechDept/index.html">قسم العلوم التكنولوجية<small>كلية مجتمع الأقصى — موقع غير رسمي</small></a>
+<nav class="main-nav"><ul>
+<li><a href="https://alaqsacollege.github.io/TechDept/index.html">الرئيسية</a></li>
+<li><a href="https://alaqsacollege.github.io/TechDept/ict/index.html">تكنولوجيا المعلومات والاتصالات</a></li>
+<li><a href="https://alaqsacollege.github.io/TechDept/multimedia/index.html">الوسائط المتعددة</a></li>
+<li><a href="https://alaqsacollege.github.io/TechDept/infosec/index.html">أمن المعلومات</a></li>
+<li><a href="https://alaqsacollege.github.io/TechDept/graphic-design/index.html">التصميم الجرافيكي</a></li>
+<li><a class="active" href="https://alaqsacollege.github.io/TechDept/mobile-apps/index.html">برمجة تطبيقات الهواتف الذكية</a></li>
+</ul></nav></div></header>
+
+<main class="wrap">
+<section class="spec-hero">
+<div class="eyebrow">تخصص ٠٥</div>
+<h1>برمجة تطبيقات الهواتف الذكية</h1>
+<nav class="breadcrumb"><a href="https://alaqsacollege.github.io/TechDept/index.html">الرئيسية</a><span class="sep">/</span><a href="https://alaqsacollege.github.io/TechDept/mobile-apps/index.html">برمجة تطبيقات الهواتف الذكية</a><span class="sep">/</span><span class="current">توصيف المساقات</span></nav>
+</section>
+
+<nav class="subnav"><ul>
+<li><a href="https://alaqsacollege.github.io/TechDept/mobile-apps/about.html">نبذة عن التخصص</a></li>
+<li><a href="https://alaqsacollege.github.io/TechDept/mobile-apps/courses.html">المساقات</a></li>
+<li><a class="active" href="https://alaqsacollege.github.io/TechDept/mobile-apps/course-descriptions.html">توصيف المساقات</a></li>
+<li><a href="https://alaqsacollege.github.io/TechDept/mobile-apps/study-plan.html">خطة توزيع المساقات على الفصول</a></li>
+<li><a href="https://alaqsacollege.github.io/TechDept/mobile-apps/programs.html">البرامج المقترحة للتخصص</a></li>
+<li><a href="https://alaqsacollege.github.io/TechDept/mobile-apps/lecturers.html">المحاضرون في التخصص</a></li>
+</ul></nav>
+
+<section class="section">
+<div class="section-head"><h2>توصيف المساقات</h2><span class="rule"></span></div>
+<p class="lede">شرح موجز لمحتوى كل مساق من مساقات تخصص برمجة تطبيقات الهواتف الذكية، مقسّمة إلى متطلبات الكلية ومساقات التخصص.</p>
+
+<h3>متطلبات الكلية</h3>
+
+<h3 id="CMP1200"><a href="https://alaqsacollege.github.io/TechDept/mobile-apps/study-plan.html#CMP1200">المهارات الرقمية</a>. 2 ساعة معتمدة · CMP1200</h3>
+<p>يُعدّ هذا المساق مدخلاً أساسياً إلى عالم تقنية المعلومات والاتصالات، إذ يُرسي القاعدة المعرفية اللازمة لاستخدام الحاسوب والإنترنت في السياقات الأكاديمية والمهنية. يتناول مكونات الحاسوب من عتاد وبرمجيات، وأنظمة التشغيل الحديثة، وآليات التواصل الرقمي عبر الشبكة، ومفاهيم الأمن الرقمي والاستخدام الآمن للإنترنت، وأدوات الإنتاجية والتطبيقات السحابية. يدعم ما يدرسه الطالب في الفصل الأول من مبادئ البرمجة والشبكات ونظم التشغيل. ويتعرّف الطالب على المساعدات الذكية بوصفها أداة إنتاجية، فيتدرّب على صياغة سؤال واضح والتحقق من الإجابة قبل اعتمادها، دون إدخال بيانات شخصية أو سرّية فيها.</p>
+
+<h3 id="ACC1216"><a href="https://alaqsacollege.github.io/TechDept/mobile-apps/study-plan.html#ACC1216">اللغة الانجليزية</a>. 2 ساعة معتمدة · ACC1216</h3>
+<p>يهدف هذا المساق إلى تدريس اللغة الإنجليزية للمبتدئين في القراءة والكتابة والمحادثة، ويشمل أساسيات القواعد النحوية واللغوية مع تصويب النطق والأخطاء الشائعة لدى الناطقين بالعربية، وتركيزاً على المفردات التقنية التي تمكّن الطالب من قراءة وثائق المطوّرين (Developer Documentation). يمهّد لمساق مصطلحات تكنولوجية باللغة الإنجليزية. ويستعين الطالب بمساعد ذكي لشرح معنى مفردة أو جملة تقنية وتصحيح جمله المكتوبة، على أن يكتب النص بنفسه أولاً ثم يراجعه.</p>
+
+<h3 id="ACC1217"><a href="https://alaqsacollege.github.io/TechDept/mobile-apps/study-plan.html#ACC1217">القرآن الكريم</a>. 2 ساعة معتمدة · ACC1217</h3>
+<p>يُعنى هذا المساق بتلاوة القرآن الكريم وحفظ سور مختارة وفق أحكام التجويد الصحيحة، مع التأمل في معاني الآيات ومضامينها الأخلاقية والروحية. يرسّخ القيم الإسلامية التي تنعكس على السلوك المهني للطالب، كالأمانة واحترام خصوصية المستخدمين وبياناتهم. ويمكن الاستعانة بأدوات ذكية للاستماع والمراجعة، على أن يبقى الحفظ والتلاوة والتفسير مرجعهما المصحف والمصادر المعتمدة لا مخرجات الذكاء الاصطناعي.</p>
+
+<h3 id="CMP1301"><a href="https://alaqsacollege.github.io/TechDept/mobile-apps/study-plan.html#CMP1301">مبادئ البرمجة</a>. 3 ساعة معتمدة · CMP1301</h3>
+<p>يُزوّد هذا المساق الطالب بقاعدة معرفية في أساسيات لغة جافا (Java Syntax)، وهي الخطوة الأولى ليصبح مبرمجاً: أنواع البيانات وتخزينها، والجمل الشرطية (if)، وجمل الدوران (Loops)، والدوال (Functions)، والمصفوفات (Arrays)، مع بناء الأكواد (build) وترجمتها (compile) ومعالجة أخطائها (debug). وهو المتطلب السابق لمساقي برمجة متقدمة وبرمجة وتصميم مواقع الانترنت (1)، وللمساقات التالية في برمجة تطبيقات الهواتف الذكية. ويستعين الطالب بمساعد ذكي لشرح رسالة خطأ في الترجمة بالعربية البسيطة، لكنه يكتب الكود بنفسه ويجرّبه قبل اعتماد أي اقتراح.</p>
+
+<h3 id="MNG2200"><a href="https://alaqsacollege.github.io/TechDept/mobile-apps/study-plan.html#MNG2200">ريادة الأعمال</a>. 2 ساعة معتمدة · MNG2200</h3>
+<p>يتناول هذا المساق مفهوم الريادة ودورها في نجاح المشروعات الصغيرة، وخصائص المنشآت الصغيرة ومزاياها، وأهم استراتيجيات الريادة، والمشكلات والتحديات التي تواجهها، وأهمية المشاريع الصغيرة للاقتصاد الوطني والتنمية، وخطوات بناء المشروع الصغير. يشجّع الطالب على تحويل مهاراته في تطبيقات الهواتف إلى مشروع ريادي، ويتكامل مع العمل الحر وتطبيقاته. ويستخدم الطالب مساعداً ذكياً لتوليد أفكار مشاريع ومقارنتها وصياغة مسودة نموذج العمل، ثم يتحقق منها بدراسة السوق الحقيقي.</p>
+
+<h3 id="ACC1213"><a href="https://alaqsacollege.github.io/TechDept/mobile-apps/study-plan.html#ACC1213">اللغة العربية</a>. 2 ساعة معتمدة · ACC1213</h3>
+<p>يهدف هذا المساق إلى تعريف الدارس بعلامات الترقيم وقواعد الإملاء والأخطاء الشائعة، والتعبير الوظيفي والإفادة منه عملياً، والجملة وأنواعها، وأدوات الربط، مع نماذج من النصوص الأدبية الأندلسية. يوظّف الطالب ذلك في صياغة التقارير والتوثيق الفني ونصوص واجهات التطبيقات بلغة سليمة. ويستعين بمساعد ذكي لمراجعة نص كتبه بنفسه وتنبيهه إلى الأخطاء الإملائية والنحوية، ثم يقرر بنفسه ما يصحّح.</p>
+
+<h3 id="ACC2212"><a href="https://alaqsacollege.github.io/TechDept/mobile-apps/study-plan.html#ACC2212">الثقافة الإسلامية</a>. 2 ساعة معتمدة · ACC2212</h3>
+<p>يتناول هذا المساق مفهوم الثقافة الإسلامية وأهدافها ومصادرها وخصائصها ودورها في بناء الفرد والمجتمع، ومفهوم العقيدة الإسلامية وأركانها وآثارها، ومدخلاً إلى الفقه الإسلامي (الأحكام التكليفية والطهارة والصلاة)، ومكانة السنة وحجيتها، ومختصر السيرة النبوية. يوجّه الطالب إلى توظيف مهاراته في التطبيقات بصورة مسؤولة. وقد يستخدم الطالب أدوات ذكية للبحث والتلخيص، على أن تُستقى الأحكام والنصوص الشرعية من المصادر المعتمدة وأهل العلم لا من الذكاء الاصطناعي.</p>
+
+<h3 id="ACC2218"><a href="https://alaqsacollege.github.io/TechDept/mobile-apps/study-plan.html#ACC2218">القضية الفلسطينية</a>. 2 ساعة معتمدة · ACC2218</h3>
+<p>يتناول هذا المساق محطات التاريخ الفلسطيني الحديث والخلفية السياسية والقانونية للقضية، وتوضيح الفكر الصهيوني وخطره على الأرض والإنسان، ومقاومة الشعب الفلسطيني. يرسّخ الانتماء الوطني ويحفّز الطالب على بناء تطبيقات وحلول رقمية تخدم قضايا وطنه وتوثّق روايته. ويستعين الطالب بمساعد ذكي لتلخيص مصادر وتنظيم الأفكار، مع التحقق من كل معلومة تاريخية أو رقم من مصادر موثوقة، لأن الأدوات الذكية قد تخطئ في الوقائع.</p>
+
+<h3 id="ACC2207"><a href="https://alaqsacollege.github.io/TechDept/mobile-apps/study-plan.html#ACC2207">مصطلحات تكنولوجية باللغة الإنجليزية</a>. 2 ساعة معتمدة · ACC2207</h3>
+<p>يهدف هذا المساق إلى تطوير مهارات اللغة الإنجليزية المهنية اللازمة للعمل في بيئة تكنولوجية، وتنمية مهارات التواصل واكتساب مصطلحات الحواسيب وتكنولوجيا المعلومات، في مجالات الدعم الفني وتطوير التطبيقات وإدارة الشبكات وكتابة التقارير الفنية. يبني على مساق اللغة الانجليزية، ويتطابق وصفه مع المساق المناظر في تخصص أمن المعلومات. ويستخدم الطالب مساعداً ذكياً لشرح المصطلحات التقنية وتدقيق تقرير فني كتبه بنفسه، ثم يراجع التصحيحات قبل اعتمادها.</p>
+
+<h3 id="HET2200"><a href="https://alaqsacollege.github.io/TechDept/mobile-apps/study-plan.html#HET2200">الصحة والغذاء</a>. 2 ساعة معتمدة · HET2200</h3>
+<p>يزوّد هذا المساق الطالب بالمعرفة الأساسية حول التغذية السليمة والصحة العامة، ويعزّز السلوكيات الصحية المستندة إلى الأدلة العلمية، ويبرز أثر الصحة الجسدية والذهنية في الإنتاجية وإدارة الطاقة والتركيز في بيئات العمل البرمجي. ويمكن للطالب استخدام مساعد ذكي لتبسيط المعلومات الصحية العامة، على ألا يعتمده بديلاً عن الطبيب أو المختص في أي حالة صحية.</p>
+
+<h3 id="CMP1209"><a href="https://alaqsacollege.github.io/TechDept/mobile-apps/study-plan.html#CMP1209">أخلاقيات المهنة وبيئة العمل</a>. 2 ساعة معتمدة · CMP1209</h3>
+<p>يناقش هذا المساق المبادئ الأخلاقية والقانونية الحاكمة للعمل في صناعة تقنية المعلومات: حقوق الملكية الفكرية، وحماية البيانات والخصوصية، وأخلاقيات استخدام الأنظمة والشبكات، ومدخلاً إلى الجرائم السيبرانية وآثارها، مع إبراز مسؤولية مطوّر التطبيقات تجاه بيانات المستخدمين. ويتكامل مع العمل الحر وتطبيقاته. ويناقش الطالب الاستخدام المسؤول للذكاء الاصطناعي: الإفصاح عن استخدامه، واحترام حقوق الملكية، وعدم إدخال بيانات المستخدمين فيه.</p>
+
+<h3 id="CMP2208"><a href="https://alaqsacollege.github.io/TechDept/mobile-apps/study-plan.html#CMP2208">العمل الحر وتطبيقاته</a>. 2 ساعة معتمدة · CMP2208</h3>
+<p>يكسب هذا المساق الطالب المهارات العملية اللازمة لبناء مسيرة مهنية مستقلة: بناء المحفظة الإلكترونية (Portfolio) وعرض التطبيقات المنجزة فيها، والتسويق الرقمي للخدمات التقنية عبر منصات العمل الحر، وإدارة العلاقة مع العملاء، وتسعير المشاريع البرمجية، وصياغة العقود المبسّطة. يتكامل مع ريادة الأعمال وأخلاقيات المهنة. ويستعين الطالب بمساعد ذكي لصياغة وصف خدماته ومسودة عرض سعر، ثم يعدّلها بنفسه ويراجعها قانونياً قبل الاعتماد.</p>
+
+<h3>مساقات التخصص</h3>
+
+<h3 id="CMP1302"><a href="https://alaqsacollege.github.io/TechDept/mobile-apps/study-plan.html#CMP1302">مبادئ الشبكات</a>. 3 ساعة معتمدة · CMP1302</h3>
+<p>يُقدّم هذا المساق أساسيات شبكات الحاسوب ومكوناتها المادية والمنطقية، ونماذج الاتصال المرجعية (OSI وTCP/IP)، وأنواع الشبكات المحلية والواسعة، وأجهزة الربط كالموجّهات والمبدّلات، وعنونة IPv4 وIPv6، وخدمتي DHCP وDNS. يتدرب الطالب على إعداد شبكة محلية واختبارها في Cisco Packet Tracer، وتحليل حركة البيانات بأداة Wireshark، وهو الأساس لفهم تبادل تطبيقات الهواتف الذكية البيانات مع الخوادم. ويستعين الطالب بمساعد ذكي لشرح مفاهيم الشبكات ونتائج أوامر مثل ping بالعربية، ويتحقق من المعلومة بالرجوع إلى مادة المساق قبل اعتمادها.</p>
+
+<h3 id="CMP1303"><a href="https://alaqsacollege.github.io/TechDept/mobile-apps/study-plan.html#CMP1303">مبادئ نظم التشغيل</a>. 3 ساعة معتمدة · CMP1303</h3>
+<p>يهدف هذا المساق إلى تزويد الطلبة بالمفاهيم الأساسية لنظم التشغيل الحديثة ودورها في إدارة الموارد: العمليات والخيوط، والذاكرة، وأنظمة الملفات، وجدولة المعالج، والتزامن وتجنب التعارض بأسلوب مبسّط، ومبادئ الصلاحيات والأمان. يتدرب الطالب على Linux وWindows وسطر الأوامر، ويتعرف على المحاكاة الافتراضية (VirtualBox وVMware) والحاويات (Docker)، وينجز مشروعاً عملياً يعزّز جاهزيته للدعم الفني وإدارة الأنظمة. ويستخدم مساعداً ذكياً لشرح أمر Linux أو رسالة خطأ بالعربية البسيطة، وقاعدة المساق ألا يُنفَّذ أي أمر لا يفهمه الطالب، وأن تُجرَّب الأوامر أولاً داخل الجهاز الافتراضي.</p>
+
+<h3 id="CMP1305"><a href="https://alaqsacollege.github.io/TechDept/mobile-apps/study-plan.html#CMP1305">مبادئ قواعد البيانات</a>. 3 ساعة معتمدة · CMP1305</h3>
+<p>يُعرّف هذا المساق الطالب بالمفاهيم الأساسية لقواعد البيانات العلائقية، بدءاً من نمذجة البيانات بمخططات الكيان والعلاقة (ER)، مروراً بتصميم الجداول والتطبيع (Normalization)، وصولاً إلى كتابة استعلامات SQL لإدراج البيانات واسترجاعها وتحديثها وحذفها وربط الجداول، مع إدارة المستخدمين والصلاحيات ومدخل إلى خطر حقن SQL. يبني الطالب قاعدة بيانات متكاملة باستخدام MySQL، وهو متطلب سابق لبرمجة تطبيقات الهواتف الذكية (1) وبرمجة وتصميم مواقع الانترنت (1) ونظم قواعد البيانات المتقدمة. ويستخدم مساعداً ذكياً لشرح استعلام SQL أو اقتراح استعلام من سؤال قصير عن الجداول، ثم يجرّبه بنفسه على قاعدة البيانات ويتأكد من صحة النتيجة.</p>
+
+<h3 id="CMP2211"><a href="https://alaqsacollege.github.io/TechDept/mobile-apps/study-plan.html#CMP2211">تصميم صفحات الانترنت</a>. 2 ساعة معتمدة · CMP2211</h3>
+<p>يُقدّم هذا المساق دراسة منهجية لتصميم صفحات الويب باستخدام HTML5 وCSS3: بناء الهيكل العام للصفحات، والعناصر والروابط والقوائم والجداول والنماذج، وتنسيق واجهات متجاوبة بـ Flexbox وCSS Grid، مع العناية بمبادئ إمكانية الوصول وتنظيم الملفات. يعمل الطالب في Visual Studio Code وينجز موقعاً ثابتاً متعدد الصفحات، والمساق متطلب سابق لبرمجة تطبيقات الهواتف الذكية (1) وبرمجة وتصميم مواقع الانترنت (1). ويطلب الطالب من مساعد ذكي هيكل صفحة HTML أو اقتراح ألوان وخطوط بجملة قصيرة ثم يعدّل النتيجة بنفسه، ويستخدمه لكتابة نص بديل للصور (Alt Text) ويراجعه للتأكد من صحته.</p>
+
+<h3 id="MOB1202"><a href="https://alaqsacollege.github.io/TechDept/mobile-apps/study-plan.html#MOB1202">تجربة المستخدم في الموبايل UX</a>. 2 ساعة معتمدة · MOB1202</h3>
+<p>يهدف هذا المساق إلى تصميم تجربة استخدام لتطبيقات الأجهزة الذكية تلبّي رضا المستخدمين وولاءهم عبر قابلية الاستخدام وسهولته. يمر الطالب بمراحل جمع المتطلبات ومقابلة المستخدمين، والشخصيات (Personas) ورحلة المستخدم، والمخططات الرسومية (Sketches)، ثم النموذج الأولي المبدئي (Wireframing)، فالنماذج التفاعلية (Prototypes) باستخدام أداة مثل Figma، مع اختبار قابلية الاستخدام. وهو متطلب سابق لمساق تصميم واجهات الموبايل UI. ويستخدم الطالب مساعداً ذكياً لاقتراح أفكار للشاشات وأسئلة بسيطة لمقابلة المستخدمين بالعربية، ثم يرسم النموذج بنفسه ويختبره مع مستخدمين حقيقيين.</p>
+
+<h3 id="CMP1206"><a href="https://alaqsacollege.github.io/TechDept/mobile-apps/study-plan.html#CMP1206">الوسائط المتعددة</a>. 2 ساعة معتمدة · CMP1206</h3>
+<p>يهدف هذا المساق إلى تعريف الطالب بالمفاهيم الحديثة في الوسائط المتعددة وتطبيقاتها: الفرق بين الرسومات المتجهة والنقطية واستخداماتها، وتصميم الشعارات، والتعامل مع قياسات التصاميم وكثافات الشاشات، واختيار الألوان لواجهات الأجهزة الذكية، وتصدير عناصر التطبيق كالأيقونات والصور. يعتمد عملياً على Adobe Illustrator وAdobe Photoshop وCorel Draw، ويدعم مساقي UX وUI. ويتدرّب الطالب على ميزات الذكاء الاصطناعي ضمن برامج التصميم، كإزالة الخلفية وتوليد صورة من وصف قصير، ويعدّل النتيجة بنفسه بوصفها نقطة بداية.</p>
+
+<h3 id="CMP1204"><a href="https://alaqsacollege.github.io/TechDept/mobile-apps/study-plan.html#CMP1204">مبادئ الاتصالات وتكنولوجيا المعلومات</a>. 2 ساعة معتمدة · CMP1204</h3>
+<p>يُقدِّم هذا المساق مقدمة نظرية في كيفية إنشاء المعلومات ومعالجتها ونقلها ومشاركتها في البيئات الشخصية والمهنية: نظم الحاسوب، ونماذج الاتصال، وتدفق البيانات، وأنواع شبكات الاتصال والإنترنت، وأساسيات الحوسبة السحابية وإنترنت الأشياء، ومدخلاً إلى أمن المعلومات والخصوصية. وهو الأساس النظري لفهم الأنظمة التي تعمل عليها تطبيقات الهواتف الذكية. ويتعرّف الطالب نظرياً على الذكاء الاصطناعي بوصفه تقنية ناشئة، ويناقش آثاره وأخلاقياته، ومنها التحقق من مخرجاته وعدم إدخال بيانات شخصية أو سرّية فيه، دون تطبيق عملي.</p>
+
+<h3 id="MOB1317"><a href="https://alaqsacollege.github.io/TechDept/mobile-apps/study-plan.html#MOB1317">برمجة تطبيقات الهواتف الذكية (1)</a>. 3 ساعة معتمدة · MOB1317</h3>
+<p>المتطلبات السابقة: تصميم صفحات الانترنت ومبادئ البرمجة ومبادئ قواعد البيانات. يبني الطالب في هذا المساق تطبيقات أندرويد بلغة جافا في Android Studio، ويغطّي المساق المواضيع المحددة الآتية: بيئة العمل والمحاكي وهيكلية المشروع (Manifest وGradle وres) وتتبع الأخطاء بـ Logcat؛ والتخطيطات (Linear وConstraint) وعناصر الواجهة (TextView وEditText وButton وImageView وCheckBox وSpinner) ومعالجة الأحداث والحوارات؛ ودورة حياة النشاط (Activity Lifecycle) والنوايا (Intents) وتمرير البيانات بين الشاشات؛ وقوائم العرض بـ RecyclerView والمحوّل (Adapter) وقوائم الخيارات؛ والموارد وتكيّف الواجهة مع الشاشات المختلفة ودعم العربية واتجاه RTL والوضع الداكن؛ والتخزين البسيط بـ SharedPreferences. ومخرج المساق تطبيق من 4 إلى 5 شاشات (مثل قائمة مهام) يعمل على المحاكي وجهاز حقيقي، وهو متطلب سابق لبرمجة تطبيقات الهواتف الذكية (2) وتحليل الأنظمة وتصميمها. ويستعين الطالب بمساعد ذكي، ومنه Gemini في Android Studio، ليشرح له رسالة الخطأ بالعربية البسيطة ويقترح خطوات الحل، ولا ينسخ كوداً دون فهمه، ويجرّبه على المحاكي ويتأكد من عمله.</p>
+
+<h3 id="CMP1321"><a href="https://alaqsacollege.github.io/TechDept/mobile-apps/study-plan.html#CMP1321">برمجة وتصميم مواقع الانترنت (1)</a>. 3 ساعة معتمدة · CMP1321</h3>
+<p>يُعد هذا المساق امتداداً لتصميم الواجهات، ويركّز على برمجة صفحات الويب الحديثة بـ JavaScript ES6+: التعامل مع DOM ومعالجة الأحداث، والتحقق من صحة النماذج، والتخزين المحلي، واستهلاك البيانات من واجهات REST البسيطة بـ Fetch API، وينجز الطالب واجهة أمامية تفاعلية متكاملة. يبني على تصميم صفحات الانترنت ومبادئ البرمجة، ويمهّد لبرمجة وتصميم مواقع الانترنت (2). ويستخدم الطالب مساعداً ذكياً لفهم أخطاء JavaScript التي تظهر في المتصفح وشرحها بالعربية، ولطلب مثال بسيط لدالة تحقق من نموذج، ثم يجرّب الكود في المتصفح ويصحّحه بنفسه.</p>
+
+<h3 id="MOB2202"><a href="https://alaqsacollege.github.io/TechDept/mobile-apps/study-plan.html#MOB2202">تصميم واجهات الموبايل UI</a>. 2 ساعة معتمدة · MOB2202</h3>
+<p>يُعنى هذا المساق بتصميم واجهات المستخدم بصرياً وتفاعلياً اعتماداً على مخرجات مساق UX: عناصر الواجهة وتخطيط الشاشات، والألوان والخطوط والأيقونات، والواجهات المتجاوبة مع أحجام الشاشات، والالتزام بأدلة Material Design، ودعم العربية والوضع الداكن، وينتج الطالب تصاميم جاهزة للتنفيذ البرمجي باستخدام Figma. ويستعين بأداة ذكية لاقتراح ألوان وخطوط متناسقة وتوليد أيقونات أولية للواجهة، ثم يعدّلها بنفسه ويتأكد من وضوحها وسهولة قراءتها على شاشة الهاتف.</p>
+
+<h3 id="CMP2220"><a href="https://alaqsacollege.github.io/TechDept/mobile-apps/study-plan.html#CMP2220">تحليل الأنظمة وتصميمها</a>. 2 ساعة معتمدة · CMP2220</h3>
+<p>يتضمّن هذا المساق المفاهيم والممارسات الحالية في هندسة البرمجيات: العملية البرمجية ونماذجها (ومنها Agile)، ومتطلبات البرمجية وتصميمها بمخططات UML كحالات الاستخدام، ومقدمة عن إدارة المشاريع، وبناء النظام وفحصه، والتوثيق. يبني على برمجة تطبيقات الهواتف الذكية (1) وبرمجة وتصميم مواقع الانترنت (1)، ويوظّف الطالب مهاراته فيه عند إعداد مشروع التخرج. ويحصل من مساعد ذكي على قائمة متطلبات أولية أو مخطط مبسّط (مثل Use Case) من وصف قصير للنظام، ثم يراجعها ويصحّحها بنفسه بما يناسب النظام الحقيقي.</p>
+
+<h3 id="CMP2317"><a href="https://alaqsacollege.github.io/TechDept/mobile-apps/study-plan.html#CMP2317">نظم قواعد البيانات المتقدمة</a>. 3 ساعة معتمدة · CMP2317</h3>
+<p>يُغطّي هذا المساق مواضيع متقدمة في قواعد البيانات: التصميم والاستعلام الأمثل، وإدارة العمليات، والاسترجاع عند الخطأ، وقواعد البيانات المتوازية وغير العلائقية (NoSQL)، وتحويل البيانات إلى XML وJSON، وقواعد بيانات الأجهزة الذكية من حيث التزامن وإدارة الذاكرة والأمن. وتُقدَّم أساسيات التخزين المحلي في أندرويد (Room/SQLite) أولاً في برمجة تطبيقات الهواتف الذكية (2)، ويتوسع فيها هذا المساق. ويستعين الطالب بمساعد ذكي لشرح الاستعلامات المعقدة بالعربية واقتراح طرق لتحسينها، ويختبر كل اقتراح على قاعدة البيانات قبل اعتماده.</p>
+
+<h3 id="CMP2322"><a href="https://alaqsacollege.github.io/TechDept/mobile-apps/study-plan.html#CMP2322">برمجة وتصميم مواقع الانترنت (2)</a>. 3 ساعة معتمدة · CMP2322</h3>
+<p>يركّز هذا المساق على برمجة جهة الخادم وتكامل قواعد البيانات باستخدام PHP أو Python (Flask/Django) مع MySQL أو PostgreSQL: عمليات CRUD، وإدارة الجلسات والمستخدمين، وبناء واستهلاك واجهات RESTful API، وأساسيات أمن الويب (SQL Injection وXSS وCSRF وإدارة كلمات المرور). يربط الطالب تطبيقات الموبايل بالخادم عبر JSON وينجز تطبيق ويب ديناميكياً آمناً، والمساق يبني على برمجة وتصميم مواقع الانترنت (1) ومتطلب سابق للحوسبة السحابية ومشروع التخرج. ويستعين الطالب بالذكاء الاصطناعي لشرح أخطاء الخادم وقواعد البيانات بالعربية ولمراجعة كوده بحثاً عن ثغرات بسيطة كحقن SQL، ويتأكد من النتائج بالاختبار لأنها قد تكون ناقصة.</p>
+
+<h3 id="MOB2318"><a href="https://alaqsacollege.github.io/TechDept/mobile-apps/study-plan.html#MOB2318">برمجة تطبيقات الهواتف الذكية (2)</a>. 3 ساعة معتمدة · MOB2318</h3>
+<p>المتطلبات السابقة: برمجة تطبيقات الهواتف الذكية (1) وبرمجة متقدمة. يرتقي هذا المساق تدريجياً من مستوى المساق الأول عبر خمس مراحل يُختبر كل منها بتطبيق صغير قبل الانتقال إلى التالي: مراجعة دورة حياة النشاط وRecyclerView والنوايا وتطبيق مبادئ OOP في بنية التطبيق؛ ثم التخزين الدائم بـ SQLite/Room امتداداً لـ SharedPreferences؛ ثم القطع (Fragments) وNavigation Component وViewModel بعد إتقان الأنشطة؛ ثم استهلاك REST/JSON والمهام المتزامنة والخدمات (Services) والإشعارات؛ وأخيراً Material Design وتحديد الموقع والخرائط. وينجز الطالب في نهايته تطبيقاً متكاملاً، والمساق متطلب سابق للحوسبة السحابية ومشروع التخرج. ويستعين بمساعد ذكي، ومنه Gemini في Android Studio، لتبسيط شرح القطع والخدمات بأمثلة قصيرة ولمراجعة جزء من كوده واقتراح تحسينه، مع بقاء كتابة التطبيق وتجربته مسؤولية الطالب.</p>
+
+<h3 id="CMP2321"><a href="https://alaqsacollege.github.io/TechDept/mobile-apps/study-plan.html#CMP2321">أمن وحماية البيانات</a>. 3 ساعة معتمدة · CMP2321</h3>
+<p>يُعدّ هذا المساق مقدمة للجوانب التقنية والإدارية لأمن المعلومات: حماية الأصول المعلوماتية، وتحديد مستويات الحماية، واكتشاف المخاطر والتهديدات والتصدي لها، والاستجابة للحوادث، وفحص الإجراءات قبل الحوادث وبعدها، وتصميم منظومة أمنية متناسقة، ويوظّف الطالب ذلك في حماية تطبيقاته وبيانات مستخدميه (التخزين الآمن والمصادقة وTLS). ويستخدم مساعداً ذكياً لتبسيط مفاهيم الأمن بالعربية ولفحص الرسائل المشبوهة (مثل التصيّد)، ولا يُدخل كلمات مرور أو بيانات سرية في أي أداة ذكاء اصطناعي.</p>
+
+<h3 id="MOB1309"><a href="https://alaqsacollege.github.io/TechDept/mobile-apps/study-plan.html#MOB1309">برمجة متقدمة</a>. 3 ساعة معتمدة · MOB1309</h3>
+<p>المتطلب السابق: مبادئ البرمجة، ويُدرَّس في الفصل الثاني من السنة الأولى ليسبق برمجة تطبيقات الهواتف الذكية (2). يقدّم المساق مفهوم البرمجة الشيئية (OOP) بلغة جافا: الأصناف والأشياء، والتغليف، والتوريث، وتعدد الأشكال، والأصناف المجردة والواجهات (Interfaces)، ومعالجة الاستثناءات، والتعامل مع الملفات، وجمع الجزئيات المهملة، مع مجموعات البيانات (ArrayList وHashMap) وبناء أصناف نموذجية (Model Classes) كتلك المستخدمة في تطبيقات أندرويد. ويستخدم الطالب مساعداً ذكياً ليشرح له الوراثة وتعدد الأشكال بأمثلة مبسطة بالعربية، ويراجع به كوده بعد أن يكتبه بنفسه.</p>
+
+<h3 id="MOB2311"><a href="https://alaqsacollege.github.io/TechDept/mobile-apps/study-plan.html#MOB2311">مشروع تخرج</a>. 3 ساعة معتمدة · MOB2311</h3>
+<p>يطبّق مجموعة من الطلاب ما تعلّموه من خلال تصميم تطبيق خاص أو لعبة للموبايل بمساعدة مشرف من أعضاء الهيئة التدريسية: تحديد المتطلبات وتحليلها وتصميم الواجهات، واتباع معايير الجودة ودراسة الجدوى وتقنيات إدارة المشاريع، وفحص البرنامج على أجهزة مختلفة، وكتابة تقرير المشروع. يتطلّب إنجاز 45 ساعة معتمدة بنجاح، إضافة إلى برمجة وتصميم مواقع الانترنت (2) وبرمجة تطبيقات الهواتف الذكية (2). ويُشجَّع الطالب على توظيف أداة أو أكثر من أدوات الذكاء الاصطناعي في إحدى مراحل مشروعه، مع توثيق استخدامها وحدودها والإفصاح عنه وفق ضوابط النزاهة الأكاديمية.</p>
+
+<h3 id="MOB2208"><a href="https://alaqsacollege.github.io/TechDept/mobile-apps/study-plan.html#MOB2208">الحوسبة السحابية</a>. 2 ساعة معتمدة · MOB2208</h3>
+<p>يتعلّم الطالب في هذا المساق، من خلال التدريب العملي، إعداد البرمجيات السحابية وتطويرها على منصات مختلفة وبناء حلول للأعمال، والاستفادة من خدمات السحابة عبر تطبيقات الموبايل، كالمصادقة والتخزين السحابي (Cloud Storage) والمراسلة السحابية (Cloud Messaging). يعتمد على برمجة وتصميم مواقع الانترنت (2) وبرمجة تطبيقات الهواتف الذكية (2). ويتعرّف الطالب على المساعدات الذكية في المنصات السحابية التي تشرح الأخطاء وتقترح إعدادات الخدمات، ويتحقق من كل توصية قبل تطبيقها على حسابه، خاصةً ما يتعلق بالتكلفة والأمان.</p>
+
+<a class="back-link" href="https://alaqsacollege.github.io/TechDept/mobile-apps/index.html">← العودة لصفحة التخصص</a>
+</section>
+</main>
+
+<footer class="site-footer"><div class="wrap"><span>© قسم العلوم التكنولوجية — كلية مجتمع الأقصى</span><span>هذا موقع طلابي غير رسمي</span></div></footer>
+</body>
+</html>
